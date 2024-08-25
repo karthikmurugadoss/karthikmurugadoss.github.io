@@ -11,37 +11,53 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            # padding: 20px;
+            # box-sizing: border-box;
             background-color: #f0f0f0;
         }
+        #.ascii-container {
+        #    overflow-x: auto;
+        #    max-width: 100%;
+        #}
         pre {
-            font-size: 14px;
+            font-size: 16px;
             line-height: 1;
             text-align: left;
-            transform: scale(1.5, 1);  /* This makes the ASCII art wider */
-            letter-spacing: 1px;       /* This adds some space between characters */
-
-        }
-        h1 {
-            margin-top: 20px;
+            # white-space: pre;
+            transform: scale(1.5, 1);
+            letter-spacing: 1px;
+            # margin: 0;
         }
         .links {
             margin-top: 20px;
+            margin-bottom: 20px;
             font-size: 18px;
+	    display: flex;
+            justify-content: center;
+            width: 100%;
         }
         .links a {
-            margin: 0 10px;
+            margin: 0 40px;
             text-decoration: none;
             color: #0077b5;
         }
         .links a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 600px) {
+            pre {
+                font-size: 10px;
+                transform: scale(1.5, 1);
+                letter-spacing: 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <pre>
+    <div class="ascii-container">
+        <pre>
 -----------=+#@@@@@@%@@@@@%####%%+----------------
 ----------=*%@@@@@@@%##%%@@%###%%%+---------------
 ----------*%@@@@@@@@@%##%@@@@%@@@@%=--------------
@@ -97,5 +113,6 @@
         <a href="https://twitter.com/karthik1708" target="_blank">Twitter</a>
         <a href="https://www.linkedin.com/in/karthikmurugadoss" target="_blank">LinkedIn</a>
     </div>
+
 </body>
 </html>
